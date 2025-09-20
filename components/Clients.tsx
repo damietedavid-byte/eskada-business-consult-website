@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { CLIENTS } from '../constants';
 import type { Client } from '../types';
@@ -54,7 +55,7 @@ const Clients: React.FC = () => {
           role="dialog"
         >
           <div
-            className="bg-white text-eskada-dark-gray rounded-lg shadow-2xl max-w-2xl w-full mx-auto p-8 relative animate-scale-in"
+            className="bg-white text-eskada-dark-gray rounded-lg shadow-2xl max-w-2xl w-full mx-auto p-6 sm:p-8 relative animate-scale-in max-h-[90vh] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
             <button
