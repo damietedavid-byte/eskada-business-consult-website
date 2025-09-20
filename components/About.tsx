@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { FaPlayCircle } from 'react-icons/fa';
 
@@ -18,7 +17,7 @@ const About: React.FC = () => {
             </p>
           </div>
           <div className="relative group aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-2xl">
-            <img src="https://picsum.photos/800/450?business" alt="Business meeting" className="w-full h-full object-cover" />
+            <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=800" alt="A diverse team of professionals in a business meeting" className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-eskada-blue bg-opacity-40 flex items-center justify-center transition-all duration-300 group-hover:bg-opacity-20">
               <FaPlayCircle className="text-white text-7xl opacity-80 group-hover:opacity-100 group-hover:scale-110 transform transition-transform duration-300 cursor-pointer" />
             </div>

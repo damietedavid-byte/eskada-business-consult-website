@@ -9,13 +9,32 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+      @keyframes scale-in {
+        from {
+          transform: scale(0.95);
+          opacity: 0;
+        }
+        to {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+      .animate-scale-in {
+        animation: scale-in 0.2s ease-out forwards;
+      }
+      .text-shadow {
+        text-shadow: 0 1px 3px rgb(0 0 0 / 0.5);
+      }
+    </style>
     <script>
       tailwind.config = {
         theme: {
           extend: {
             fontFamily: {
               sans: ['Inter', 'sans-serif'],
+              playfair: ['Playfair Display', 'serif'],
             },
             colors: {
               'eskada-blue': '#0A192F',
@@ -23,6 +42,12 @@
               'eskada-light-gray': '#F8F9FA',
               'eskada-gray': '#E9ECEF',
               'eskada-dark-gray': '#343A40',
+              'shell-red': '#E30613',
+              'chevron-blue': '#005596',
+              'nddc-green': '#008751',
+              'nnpc-green': '#008753',
+              'exxon-red': '#D9001B',
+              'total-blue': '#003764',
             }
           }
         }
@@ -42,5 +67,6 @@
 </head>
   <body>
     <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>

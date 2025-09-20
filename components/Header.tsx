@@ -22,11 +22,16 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-eskada-blue bg-opacity-95 shadow-lg backdrop-blur-sm' : 'bg-transparent'}`}>
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-eskada-blue bg-opacity-95 shadow-lg backdrop-blur-sm' : 'bg-transparent text-shadow'}`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <a href="#home" onClick={(e) => scrollToSection(e, '#home')} className="flex-shrink-0">
-            <h1 className={`font-extrabold text-2xl tracking-wider ${isScrolled ? 'text-white' : 'text-eskada-blue'}`}>ESKADA</h1>
+            <div className="text-white">
+              <span className="font-playfair font-bold text-3xl tracking-tight">ESKADA</span>
+              <span className="block text-xs font-sans tracking-[0.2em] opacity-80 -mt-1">
+                BUSINESS CONSULT
+              </span>
+            </div>
           </a>
           <nav className="hidden md:flex md:items-center md:space-x-8">
             {NAV_LINKS.map((link) => (
@@ -34,7 +39,7 @@ const Header: React.FC = () => {
                 key={link.name} 
                 href={link.href} 
                 onClick={(e) => scrollToSection(e, link.href)} 
-                className={`text-sm font-medium transition-colors duration-300 ${isScrolled ? 'text-gray-300 hover:text-eskada-gold' : 'text-eskada-dark-gray hover:text-eskada-blue'}`}
+                className="text-sm font-semibold transition-colors duration-300 text-gray-300 hover:text-eskada-gold"
               >
                 {link.name}
               </a>
@@ -46,7 +51,7 @@ const Header: React.FC = () => {
             </a>
           </div>
           <div className="md:hidden">
-            <button onClick={() => setIsOpen(!isOpen)} className={`focus:outline-none ${isScrolled ? 'text-white' : 'text-eskada-blue'}`}>
+            <button onClick={() => setIsOpen(!isOpen)} className="focus:outline-none text-white">
               {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
             </button>
           </div>

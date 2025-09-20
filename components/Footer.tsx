@@ -13,8 +13,13 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div className="md:col-span-1">
-            <h2 className="text-2xl font-bold text-white mb-2">ESKADA</h2>
-            <p className="text-sm text-gray-400">Your Strategic Partner for Success.</p>
+             <div>
+                <span className="font-playfair font-bold text-3xl tracking-tight text-white">ESKADA</span>
+                <span className="block text-xs font-sans tracking-[0.2em] text-gray-300 opacity-80 -mt-1">
+                  BUSINESS CONSULT
+                </span>
+              </div>
+            <p className="text-sm text-gray-400 mt-4">Your Strategic Partner for Success.</p>
             <div className="flex space-x-4 mt-4">
               <a href="#" className="hover:text-eskada-gold transition-colors"><FaTwitter size={20} /></a>
               <a href="#" className="hover:text-eskada-gold transition-colors"><FaLinkedin size={20} /></a>
