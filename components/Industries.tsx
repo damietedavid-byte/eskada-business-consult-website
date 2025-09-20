@@ -51,24 +51,29 @@ const Industries: React.FC = () => {
           role="dialog"
         >
           <div
-            className="bg-white text-eskada-dark-gray rounded-lg shadow-2xl max-w-2xl w-full mx-auto p-8 relative animate-scale-in"
+            className="bg-white text-eskada-dark-gray rounded-lg shadow-2xl max-w-2xl w-full mx-auto animate-scale-in max-h-[90vh] flex flex-col"
             onClick={(e) => e.stopPropagation()}
           >
-            <button
-              onClick={handleCloseModal}
-              className="absolute top-4 right-4 text-gray-400 hover:text-eskada-blue transition-colors"
-              aria-label="Close modal"
-            >
-              <FaTimes size={24} />
-            </button>
-            <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-6">
-              <div className="flex-shrink-0 flex items-center justify-center h-20 w-20 rounded-full bg-eskada-gold text-eskada-blue">
-                <selectedIndustry.icon className="text-4xl" />
+            <div className="p-6 sm:p-8 pb-4 relative flex-shrink-0 border-b border-gray-200">
+              <button
+                onClick={handleCloseModal}
+                className="absolute top-4 right-4 text-gray-400 hover:text-eskada-blue transition-colors"
+                aria-label="Close modal"
+              >
+                <FaTimes size={24} />
+              </button>
+              <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-6 pr-8">
+                <div className="flex-shrink-0 flex items-center justify-center h-20 w-20 rounded-full bg-eskada-gold text-eskada-blue">
+                  <selectedIndustry.icon className="text-4xl" />
+                </div>
+                <div className="mt-2 sm:mt-0">
+                  <h2 className="text-2xl font-bold text-eskada-blue">{selectedIndustry.name}</h2>
+                </div>
               </div>
-              <div>
-                <h2 className="text-2xl font-bold text-eskada-blue mb-2">{selectedIndustry.name}</h2>
-                <p className="text-gray-600 leading-relaxed">{selectedIndustry.description}</p>
-              </div>
+            </div>
+
+            <div className="px-6 sm:px-8 pb-6 sm:pb-8 pt-4 overflow-y-auto">
+              <p className="text-gray-600 leading-relaxed">{selectedIndustry.description}</p>
             </div>
           </div>
         </div>

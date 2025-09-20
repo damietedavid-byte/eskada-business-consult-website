@@ -55,31 +55,36 @@ const Clients: React.FC = () => {
           role="dialog"
         >
           <div
-            className="bg-white text-eskada-dark-gray rounded-lg shadow-2xl max-w-2xl w-full mx-auto p-6 sm:p-8 relative animate-scale-in max-h-[90vh] overflow-y-auto"
+            className="bg-white text-eskada-dark-gray rounded-lg shadow-2xl max-w-2xl w-full mx-auto animate-scale-in max-h-[90vh] flex flex-col"
             onClick={(e) => e.stopPropagation()}
           >
-            <button
-              onClick={handleCloseModal}
-              className="absolute top-4 right-4 text-gray-400 hover:text-eskada-blue transition-colors"
-              aria-label="Close modal"
-            >
-              <FaTimes size={24} />
-            </button>
+            <div className="px-6 pt-6 pb-4 sm:px-8 sm:pt-8 flex-shrink-0 border-b border-gray-200">
+              <div className="relative flex items-center justify-center">
+                <h2 className={`${selectedClient.className} text-center`}>{selectedClient.name}</h2>
+                <button
+                  onClick={handleCloseModal}
+                  className="absolute top-1/2 -translate-y-1/2 right-0 text-gray-400 hover:text-eskada-blue transition-colors"
+                  aria-label="Close modal"
+                >
+                  <FaTimes size={24} />
+                </button>
+              </div>
+            </div>
             
-            <h2 className={`${selectedClient.className} mb-6 text-center`}>{selectedClient.name}</h2>
-
-            <div className="space-y-6 text-left">
-              <div>
-                <h3 className="font-bold text-eskada-blue uppercase text-sm tracking-wider mb-2">About the Company</h3>
-                <p className="text-gray-600 leading-relaxed">{selectedClient.about}</p>
-              </div>
-              <div>
-                <h3 className="font-bold text-eskada-blue uppercase text-sm tracking-wider mb-2">Our Partnership</h3>
-                <p className="text-gray-600 leading-relaxed">{selectedClient.partnership}</p>
-              </div>
-              <div className="border-t border-gray-200 pt-4">
-                <FaQuoteLeft className="text-eskada-gold text-2xl mb-2" />
-                <p className="text-gray-800 italic font-medium">"{selectedClient.testimonial}"</p>
+            <div className="p-6 sm:p-8 pt-6 overflow-y-auto">
+              <div className="space-y-6 text-left">
+                <div>
+                  <h3 className="font-bold text-eskada-blue uppercase text-sm tracking-wider mb-2">About the Company</h3>
+                  <p className="text-gray-600 leading-relaxed">{selectedClient.about}</p>
+                </div>
+                <div>
+                  <h3 className="font-bold text-eskada-blue uppercase text-sm tracking-wider mb-2">Our Partnership</h3>
+                  <p className="text-gray-600 leading-relaxed">{selectedClient.partnership}</p>
+                </div>
+                <div className="border-t border-gray-200 pt-4">
+                  <FaQuoteLeft className="text-eskada-gold text-2xl mb-2" />
+                  <p className="text-gray-800 italic font-medium">"{selectedClient.testimonial}"</p>
+                </div>
               </div>
             </div>
           </div>
