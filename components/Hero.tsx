@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 const Hero: React.FC = () => {
@@ -9,10 +10,10 @@ const Hero: React.FC = () => {
   return (
     <section id="home" className="relative h-screen flex items-center justify-center text-white bg-cover bg-center" style={{ backgroundImage: `linear-gradient(rgba(10, 25, 47, 0.7), rgba(10, 25, 47, 0.7)), url('https://images.pexels.com/photos/1647962/pexels-photo-1647962.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')` }}>
       <div className="text-center px-4 max-w-4xl mx-auto">
-        <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-4 tracking-tight">
+        <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-4 tracking-tight opacity-0 animate-fade-in-scale-up">
           20+ Years of Excellence in Mediation & Business Consultancy
         </h1>
-        <p className="text-lg md:text-xl mb-8 text-gray-300 max-w-2xl mx-auto">
+        <p className="text-lg md:text-xl mb-8 text-gray-300 max-w-2xl mx-auto opacity-0 animate-fade-in">
           Your strategic partner for navigating Nigeria's business landscape. We turn complexity into opportunity.
         </p>
         <a 
